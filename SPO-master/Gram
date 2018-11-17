@@ -1,0 +1,10 @@
+VAR -> [a-z][_0-9a-z]*
+DIGIT -> [1-9][0-9]*|0
+ASIGNMENT OPERATOR -> =
+OPERATOR -> + | - | * | /
+
+lang -> expr*
+expr -> assign_expr
+assign_expr -> VAR AS_OP value_expr
+value -> DIGIT | VAR
+value_expr -> value (OP value)*
